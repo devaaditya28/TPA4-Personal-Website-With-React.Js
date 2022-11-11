@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import logo from "../assets/img/LogoName.png"
+import logo from "../assets/img/LogoName.png";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home')
@@ -25,41 +26,43 @@ export const NavBar = () => {
     }
 
     return (
-        <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-            <Container>
-                <Navbar.Brand href="/">
-                    <img src={logo} alt="Logo" />
-                </Navbar.Brand>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-                        <Nav.Link 
-                        href="#home" 
-                        className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
-                        onClick={() => onUpdateActiveLink('home')}>
-                            Home
-                        </Nav.Link>
-                        <Nav.Link 
-                        href="#about" 
-                        className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} 
-                        onClick={() => onUpdateActiveLink('about')}>
-                            About
-                        </Nav.Link>
-                        <Nav.Link 
-                        href="#project"
-                        className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'}
-                        onClick={() => onUpdateActiveLink('project')}>
-                            Portfolio
-                        </Nav.Link>
-                        <Nav.Link 
-                        href="#blog" 
-                        className={activeLink === 'blog' ? 'active navbar-link' : 'navbar-link'}
-                        onClick={() => onUpdateActiveLink('blog')}>
-                            Blog
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <Router>
+            <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+                <Container>
+                    <Navbar.Brand href="/">
+                        <img src={logo} alt="Logo" />
+                    </Navbar.Brand>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link 
+                                href="#home" 
+                                className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+                                onClick={() => onUpdateActiveLink('home')}>
+                                Home
+                            </Nav.Link>
+                            <Nav.Link 
+                                href="#about" 
+                                className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} 
+                                onClick={() => onUpdateActiveLink('about')}>
+                                About
+                            </Nav.Link>
+                            <Nav.Link 
+                                href="#project"
+                                className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'}
+                                onClick={() => onUpdateActiveLink('project')}>
+                                Portfolio
+                            </Nav.Link>
+                            <Nav.Link 
+                                href="#blog" 
+                                className={activeLink === 'blog' ? 'active navbar-link' : 'navbar-link'}
+                                onClick={() => onUpdateActiveLink('blog')}>
+                                Blog
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </Router>
     )
 }
 
