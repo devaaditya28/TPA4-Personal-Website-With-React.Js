@@ -1,9 +1,10 @@
 import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from './components/Navbar';
-import { Banner } from "./components/Banner";
+import NavBar from './components/Navbar';
+import Banner from "./components/Banner";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Banner />
       <About />
+      <Portfolio />
     </div>
   );
 }

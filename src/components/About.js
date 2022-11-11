@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = (props) => {
+export const About = (props) => {
 
     const SCREEN_CONSTANTS = { 
         description: "Saya Mahasiswa Teknik Informatika STMIK Bandung. Saya adalah orang yang senang dengan hal baru. Hobi saya adalah menonton film dan olahraga. Saat ini saya sedang mengikuti program Kampus Merdeka pada Skilvul Tech For Impact dengan Learning Track Front End Web Development.",
