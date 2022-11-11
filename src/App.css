@@ -100,7 +100,10 @@ nav.navbar {
 
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-image: url('./assets/img/banner.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 nav.navbar a.navbar-brand {
@@ -147,7 +150,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: aquamarine;
+  background-color: #8FE3D9;
   left: 0;
   top: 0;
   z-index: -1;
@@ -357,6 +360,11 @@ h2{
   background-color: #333333;
 }
 
+hr {
+  height: 2px;
+  background-image: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
@@ -422,4 +430,65 @@ h2{
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
+}
+
+/* Blog CSS */
+.blog {
+  background-color: #222222;
+  color: black;
+}
+
+hr {
+  height: 2px;
+  background-image: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
+.blogText {
+  text-align: center;
+}
+
+.card {
+  transition: 2s;
+  box-shadow: 0 0px 20px -2px #1f2235;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card-body a {
+  color: white;
+  background-color: #8FE3D9; 
+}
+
+.card-body a:hover {
+  background-color: transparent;
+  border: solid 1px #8FE3D9 !important;
+}
+
+/* Footer CSS */
+.footer {
+  padding: 20px 0;
+  background-image: url('./assets/img/banner.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer img {
+  width: 20%;
+}
+
+.footer a{
+  padding: 0.25rem;
+  text-decoration: none;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(121, 121, 121);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
 }
