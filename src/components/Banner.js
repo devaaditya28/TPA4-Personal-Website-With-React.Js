@@ -10,7 +10,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = [ "Front End Web Developer"];
+    const toRotate = [ "Web Developer"];
     const period = 2000;
 
     useEffect(() => {
@@ -55,7 +55,7 @@ export const Banner = () => {
                         {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                             <h1>{`Hi! I'm Deva Aditya Octavian`} <span className="txt-rotate" dataperiod="1000" data-rotate='[ "Front End Web Developer"]'><span className="wrap">{text}</span></span></h1>
-                            <p>Ini adalah Personal Website Saya. Detail dan Portfolio Front End Web Developer</p>
+                            <p>Ini adalah Personal Website Saya. Detail dan Portfolio Web Developer</p>
                             <button onClick={(e) => { e.preventDefault(); window.location.href='https://github.com/devaaditya28'}}>Let’s Connect <ArrowRightCircle size={25} /></button>
                         </div>}
                         </TrackVisibility>
